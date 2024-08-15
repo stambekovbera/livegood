@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import { MainPage } from '@/pages';
+import { FriendsPage, MainPage } from '@/pages';
 import { PageLoader } from '@/shared/ui/PageLoader/PageLoader';
 
 const getElement = (element: React.ReactNode) => {
@@ -12,5 +12,9 @@ export const routes = createBrowserRouter([
   {
     path: '/',
     element: getElement(<MainPage/>)
+  },
+  {
+    path: '/friends',
+    element: getElement(<FriendsPage/>)
   }
 ]);

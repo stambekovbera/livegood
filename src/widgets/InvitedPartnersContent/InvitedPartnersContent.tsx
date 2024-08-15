@@ -16,7 +16,7 @@ export const InvitedPartnersContent: React.FC<IInvitedPartnersContentProps> = (p
     className = '',
   } = props;
 
-  const [ isOpenDrawer, setIsOpenDrawer ] = useState<boolean>(true);
+  const [ isOpenDrawer, setIsOpenDrawer ] = useState<boolean>(false);
 
   const handleCloseDrawer = () => {
     setIsOpenDrawer( false );

@@ -1,7 +1,7 @@
 export default {
-    styleOverrides: {
-        root: {
-            borderRadius: '6px',
-        }
+  styleOverrides: {
+    root: {
+      borderRadius: '6px',
     }
+  }
 };
