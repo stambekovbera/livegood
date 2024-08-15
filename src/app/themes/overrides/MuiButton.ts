@@ -14,6 +14,7 @@ export default {
       fontWeight: '700',
       fontSize: '16px',
       lineHeight: '19px',
+      borderBottom: '4px solid rgba(23, 18, 40, 0.2)',
     },
     outlined: {
       borderColor: palette.primary.main,

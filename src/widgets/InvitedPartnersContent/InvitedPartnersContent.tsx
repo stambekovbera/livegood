@@ -1,7 +1,8 @@
-import { Button } from '@mui/material';
 import cn from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 
+import { StatusesDrawer } from '@/entities/Status';
+import { CopyInviteButton } from '@/features/CopyInviteButton/ui/CopyInviteButton';
 import { InvitedPartnersAmount } from '@/widgets/InvitedPartnersAmount/InvitedPartnersAmount';
 
 import classes from './InvitedPartnersContent.module.scss';
@@ -14,12 +15,24 @@ export const InvitedPartnersContent: React.FC<IInvitedPartnersContentProps> = (p
   const {
     className = '',
   } = props;
+
+  const [ isOpenDrawer, setIsOpenDrawer ] = useState<boolean>(true);
+
+  const handleCloseDrawer = () => {
+    setIsOpenDrawer( false );
+  };
+
+  const handleOpenDrawer = () => {
+    setIsOpenDrawer( true );
+  };
+
   return (
-    <div className={ cn(classes.wrapper, {}, [ className ]) }>
-      <InvitedPartnersAmount amount='4' maxAmount='5'/>
-      <Button className={classes.button} variant='contained'>
-        Пригласить друга
-      </Button>
-    </div>
+    <>
+      <div className={ cn( classes.wrapper, {}, [ className ] ) }>
+        <InvitedPartnersAmount amount='4' maxAmount='5'/>
+        <CopyInviteButton/>
+      </div>
+      <StatusesDrawer isOpen={isOpenDrawer} onClose={handleCloseDrawer}/>
+    </>
   );
 };

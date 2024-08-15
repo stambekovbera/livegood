@@ -17,7 +17,7 @@ export const TicketValidityPeriod: React.FC<ITicketValidityPeriodProps> = (props
     expired= false
   } = props;
 
-  const [ isOpenActivateDialog, setIsOpenActivateDialog ] = useState( true );
+  const [ isOpenActivateDialog, setIsOpenActivateDialog ] = useState( false );
 
   const handleCloseActivateDialog = () => {
     setIsOpenActivateDialog(false);
