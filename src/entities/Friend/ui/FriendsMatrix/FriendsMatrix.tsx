@@ -17,7 +17,7 @@ export const FriendsMatrix: React.FC<IFriendsMatrixProps> = (props) => {
   return (
     <div className={ cn( classes.wrapper, {}, [ className ] ) }>
       { mockFriendsNode.map( (friend, index) => (
-        <FriendsMatrixList side={index === 0 ? 'left' : 'right'} key={`friend-matrix-${friend.username}`} friend={ friend }/>
+        <FriendsMatrixList key={`friend-matrix-${friend.username}`} friend={ friend }/>
       ) ) }
     </div>
   );

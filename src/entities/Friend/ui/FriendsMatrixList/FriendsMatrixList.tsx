@@ -9,7 +9,6 @@ import classes from './FriendsMatrixList.module.scss';
 
 interface IFriendsMatrixListProps {
   friend: IFriendNode | null;
-  side: 'left' | 'right';
   depth?: number;
   className?: string;
 }
@@ -25,12 +24,14 @@ export const FriendsMatrixList: React.FC<IFriendsMatrixListProps> = (props) => {
     className = '',
     depth = 1,
     friend,
-    side
   } = props;
 
   return (
     <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
-      <Box width={sizes[depth as keyof typeof sizes]} className={ classes.friendInfo }>
+      <Box width={sizes[depth as keyof typeof sizes]} className={ cn(classes.friendInfo, {
+        [`${ classes.lastDepth }`]: depth === 3,
+        [`${ classes.secondDepth }`]: depth === 2,
+      }) }>
         <UserAvatar width={ sizes[depth as keyof typeof sizes] } height={ sizes[depth as keyof typeof sizes] } src={ friend?.avatar || null }/>
         <Typography className={classes.username} sx={{ width: sizes[depth as keyof typeof sizes] }}>
           { friend?.username || '—' }
@@ -40,8 +41,8 @@ export const FriendsMatrixList: React.FC<IFriendsMatrixListProps> = (props) => {
         <Box className={cn(classes.nextDept, {
           [`${classes.lastDepth}`]: depth === 2
         })}>
-          <FriendsMatrixList side={side} friend={friend?.left || null} depth={depth + 1}/>
-          <FriendsMatrixList side={side} friend={friend?.right || null} depth={depth + 1}/>
+          <FriendsMatrixList friend={friend?.left || null} depth={depth + 1}/>
+          <FriendsMatrixList friend={friend?.right || null} depth={depth + 1}/>
         </Box>
       )}
     </Box>
