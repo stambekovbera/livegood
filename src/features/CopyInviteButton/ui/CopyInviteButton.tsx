@@ -30,7 +30,7 @@ export const CopyInviteButton: React.FC<ICopyInviteButtonProps> = (props) => {
 
   return (
     <Tooltip open={isOpenTooltip} arrow placement='top' title='Реферальная ссылка скопирована!' className={ cn( classes.wrapper, {}, [ className ] ) }>
-      <Button variant='contained' onClick={handleClickInviteButton}>Пригласить друга</Button>
+      <Button fullWidth variant='contained' onClick={handleClickInviteButton}>Пригласить друга</Button>
     </Tooltip>
   );
 };

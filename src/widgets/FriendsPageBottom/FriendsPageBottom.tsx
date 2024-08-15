@@ -3,6 +3,7 @@ import cn from 'classnames';
 import React, { useState } from 'react';
 
 import { FriendsMatrix, FriendsVariantTabs } from '@/entities/Friend';
+import { CopyInviteButton } from '@/features/CopyInviteButton/ui/CopyInviteButton';
 
 import classes from './FriendsPageBottom.module.scss';
 
@@ -22,9 +23,14 @@ export const FriendsPageBottom: React.FC<IFriendsPageBottomProps> = (props) => {
   };
 
   return (
-    <Box className={ cn(classes.wrapper, {}, [ className ]) }>
-      <FriendsVariantTabs value={activeVariant} onChange={handleChangeActiveVariant}/>
-      <FriendsMatrix/>
+    <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
+      <Box className={ classes.top }>
+        <FriendsVariantTabs value={ activeVariant } onChange={ handleChangeActiveVariant }/>
+        {activeVariant === 'matrix' && <FriendsMatrix/>}
+      </Box>
+      <Box className={classes.bottom}>
+        <CopyInviteButton/>
+      </Box>
     </Box>
   );
 };
