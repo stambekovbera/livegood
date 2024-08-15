@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:ts:fix": "eslint . --fix",
     "lint:scss": "stylelint \"**/*.scss\"",
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
