@@ -116,7 +116,46 @@ const theme = createTheme(
             borderTop: '1px solid rgba(255, 255, 255, 0.1)'
           }
         }
-      }
+      },
+      MuiTabs: {
+        styleOverrides: {
+          root: {
+            minHeight: '0',
+            background: 'rgba(15, 12, 29, 1)',
+            borderRadius: '140px',
+          },
+          indicator: {
+            display: 'none',
+          },
+          flexContainer: {
+            padding: '4px',
+            gap: '8px',
+          }
+        }
+      },
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            padding: '8px 20px',
+            borderRadius: '60px',
+            color: '#fff',
+            fontSize: '16px',
+            lineHeight: '19px',
+            fontWeight: '700',
+            textTransform: 'none',
+            minHeight: '0',
+            height: 'auto',
+            backgroundColor: 'transparent',
+            transition: 'background-color .2s linear',
+
+            '&.Mui-selected': {
+              border: 'none',
+              color: '#fff',
+              backgroundColor: palette.primary.main
+            }
+          }
+        }
+      },
     },
   },
   coreRuRu

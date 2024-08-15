@@ -4,13 +4,13 @@ import React from 'react';
 import { CoinContent } from '@/widgets/CoinContent/CoinContent';
 import { InvitedPartnersContent } from '@/widgets/InvitedPartnersContent/InvitedPartnersContent';
 
-import classes from './MainBottom.module.scss';
+import classes from './MainPageBottom.module.scss';
 
-interface IMainBottomProps {
+interface IMainPageBottomProps {
   className?: string;
 }
 
-export const MainBottom: React.FC<IMainBottomProps> = (props) => {
+export const MainPageBottom: React.FC<IMainPageBottomProps> = (props) => {
   const {
     className = '',
   } = props;

@@ -1,5 +1,9 @@
+import { Box } from '@mui/material';
 import cn from 'classnames';
 import React from 'react';
+
+import { FriendsPageBottom } from '@/widgets/FriendsPageBottom/FriendsPageBottom';
+import { FriendsPageTop } from '@/widgets/FriendsPageTop/FriendsPageTop';
 
 import classes from './FriendsPage.module.scss';
 
@@ -12,8 +16,10 @@ const FriendsPage: React.FC<IFriendsPageProps> = (props) => {
     className = '',
   } = props;
   return (
-    <div className={ cn(classes.wrapper, {}, [ className ]) }>
-    </div>
+    <Box className={ cn(classes.wrapper, {}, [ className ]) }>
+      <FriendsPageTop/>
+      <FriendsPageBottom/>
+    </Box>
   );
 };
 

@@ -3,8 +3,8 @@ import cn from 'classnames';
 import React from 'react';
 
 import BackgroundTonCoins from '@/shared/assets/png/background-ton-coins.png';
-import { MainBottom } from '@/widgets/MainBottom/MainBottom';
-import { MainTop } from '@/widgets/MainTop/MainTop';
+import { MainPageBottom } from '@/widgets/MainPageBottom/MainPageBottom';
+import { MainPageTop } from '@/widgets/MainPageTop/MainPageTop';
 
 import classes from './MainPage.module.scss';
 
@@ -19,8 +19,8 @@ const MainPage: React.FC<IMainPageProps> = (props) => {
   return (
     <Box className={ cn(classes.wrapper, {}, [ className ]) }>
       <img className={classes.backgroundTonCoins} src={BackgroundTonCoins} alt="Задний фон с TON коинами"/>
-      <MainTop/>
-      <MainBottom/>
+      <MainPageTop/>
+      <MainPageBottom/>
     </Box>
   );
 };

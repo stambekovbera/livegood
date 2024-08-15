@@ -6,13 +6,13 @@ import { Balance } from '@/entities/Balance/ui/Balance';
 import { TicketValidityPeriod } from '@/features/TicketValidityPeriod';
 import BookmarkIcon from '@/shared/assets/svg/Bookmark.svg?react';
 
-import classes from './MainTop.module.scss';
+import classes from './MainPageTop.module.scss';
 
-interface IMainTopProps {
+interface IMainPageTopProps {
   className?: string;
 }
 
-export const MainTop: React.FC<IMainTopProps> = (props) => {
+export const MainPageTop: React.FC<IMainPageTopProps> = (props) => {
   const {
     className = '',
   } = props;
