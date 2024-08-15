@@ -1,5 +1,7 @@
 export default {
-    styleOverrides: {
-        root: {}
+  styleOverrides: {
+    root: {
+      padding: '0 12px',
     }
+  }
 };

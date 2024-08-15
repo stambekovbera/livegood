@@ -1,9 +1,11 @@
 export default {
-    styleOverrides: {
-        root: {
-            fontSize: '20px',
-            fontWeight: '400',
-            lineHeight: 'normal',
-        },
-    }
+  styleOverrides: {
+    root: {
+      padding: '0px 12px',
+      textAlign: 'center',
+      fontSize: '24px',
+      fontWeight: '700',
+      lineHeight: '30px',
+    },
+  }
 };

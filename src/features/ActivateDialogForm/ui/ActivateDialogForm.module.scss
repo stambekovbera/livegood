@@ -1,0 +1,31 @@
+.wrapper {}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 75px;
+}
+
+.price-label {
+  &:global.MuiTypography-root {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+}
+
+.price-amount {
+  &:global.MuiTypography-root {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: var(--primary);
+  }
+}

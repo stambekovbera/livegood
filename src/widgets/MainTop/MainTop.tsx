@@ -27,7 +27,7 @@ export const MainTop: React.FC<IMainTopProps> = (props) => {
         </Button>
       </Box>
 
-      <TicketValidityPeriod/>
+      <TicketValidityPeriod expired={true}/>
     </Box>
   );
 };

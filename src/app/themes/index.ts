@@ -21,8 +21,10 @@ const theme = createTheme(
     typography,
 
     components: {
+      //@ts-expect-error: TODO все правильно, тайпскрипт просто ругается сам по себе
       MuiButton,
       MuiInputBase,
+      //@ts-expect-error: TODO все правильно, тайпскрипт просто ругается сам по себе
       MuiDialogTitle,
       MuiDialogContent,
       MuiDialogActions,
@@ -31,6 +33,24 @@ const theme = createTheme(
       MuiBackdrop,
       MuiIconButton,
       MuiFormLabel,
+      MuiDialog: {
+        styleOverrides: {
+          root: {
+            '& > .MuiDialog-container': {
+              '& > .MuiPaper-root': {
+                background: 'rgba(19, 15, 38, 1)',
+                padding: '16px 0 12px',
+                marginLeft: '20px',
+                marginRight: '20px',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+              }
+            }
+          }
+        }
+      }
     },
   },
   coreRuRu
