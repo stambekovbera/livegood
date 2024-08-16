@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import cn from 'classnames';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import TonIcon from '@/shared/assets/svg/Balance/TON.svg?react';
 
@@ -14,8 +15,15 @@ export const Balance: React.FC<IBalanceProps> = (props) => {
   const {
     className = '',
   } = props;
+
+  const navigate = useNavigate();
+
+  const onClickBalance = () => {
+    navigate( '/transactions' );
+  };
+
   return (
-    <div className={ cn(classes.wrapper, {}, [ className ]) }>
+    <div className={ cn(classes.wrapper, {}, [ className ]) } onClick={onClickBalance}>
       <Typography className={classes.label}>Баланс</Typography>
       <Box className={classes.balanceWrapper}>
         <TonIcon/>

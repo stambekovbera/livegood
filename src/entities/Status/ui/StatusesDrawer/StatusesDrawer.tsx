@@ -23,7 +23,7 @@ export const StatusesDrawer: React.FC<IStatusesDrawerProps> = (props) => {
     <Drawer anchor='bottom' open={isOpen} onClose={onClose} className={ cn(classes.wrapper, {}, [ className ]) }>
       <Box className={classes.titleWrapper}>
         <Typography className={classes.title}>Статусы</Typography>
-        <IconButton>
+        <IconButton onClick={onClose}>
           <CloseRounded color='primary'/>
         </IconButton>
       </Box>

@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import cn from 'classnames';
 import React, { useState } from 'react';
 
@@ -28,10 +29,12 @@ export const InvitedPartnersContent: React.FC<IInvitedPartnersContentProps> = (p
 
   return (
     <>
-      <div className={ cn( classes.wrapper, {}, [ className ] ) }>
-        <InvitedPartnersAmount amount='4' maxAmount='5'/>
+      <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
+        <Box onClick={handleOpenDrawer}>
+          <InvitedPartnersAmount amount='4' maxAmount='5'/>
+        </Box>
         <CopyInviteButton/>
-      </div>
+      </Box>
       <StatusesDrawer isOpen={isOpenDrawer} onClose={handleCloseDrawer}/>
     </>
   );

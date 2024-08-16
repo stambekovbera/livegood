@@ -57,7 +57,10 @@ const theme = createTheme(
             background: 'rgba(15, 12, 29, 1)',
             fontSize: '14px',
             lineHeight: '17px',
-            fontWeight: '400'
+            fontWeight: '400',
+          },
+          popper: {
+            zIndex: '999',
           },
           arrow: {
             color: 'rgba(15, 12, 29, 1)',
