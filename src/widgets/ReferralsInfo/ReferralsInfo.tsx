@@ -1,6 +1,8 @@
 import { Box, Button, Typography } from '@mui/material';
 import cn from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
+
+import { WithdrawalFundsDialogForm } from '@/features/WithdrawalFundsDialogForm';
 
 import classes from './ReferralsInfo.module.scss';
 
@@ -12,27 +14,42 @@ export const ReferralsInfo: React.FC<IReferralsInfoProps> = (props) => {
   const {
     className = '',
   } = props;
+
+  const [ isOpenDialog, setIsOpenDialog ] = useState<boolean>( false );
+
+  const handleCloseDialog = () => {
+    setIsOpenDialog( false );
+  };
+
+  const handleOpenDialog = () => {
+    setIsOpenDialog( true );
+  };
+
   return (
-    <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
-      <Box className={classes.grid}>
-        <Box className={classes.content}>
-          <Typography className={classes.label}>
-            Доход с рефералов
-          </Typography>
-          <Typography className={classes.value}>
-            55 TON
-          </Typography>
+    <>
+      <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
+        <Box className={classes.grid}>
+          <Box className={classes.content}>
+            <Typography className={classes.label}>
+              Доход с рефералов
+            </Typography>
+            <Typography className={classes.value}>
+              55 TON
+            </Typography>
+          </Box>
+          <Box className={classes.content}>
+            <Typography className={classes.label}>
+              Друзей приглашено
+            </Typography>
+            <Typography className={classes.value}>
+              2
+            </Typography>
+          </Box>
         </Box>
-        <Box className={classes.content}>
-          <Typography className={classes.label}>
-            Друзей приглашено
-          </Typography>
-          <Typography className={classes.value}>
-            2
-          </Typography>
-        </Box>
+        <Button variant='contained' onClick={handleOpenDialog}>Вывести</Button>
       </Box>
-      <Button variant='contained'>Вывести</Button>
-    </Box>
+
+      <WithdrawalFundsDialogForm isOpen={isOpenDialog} onClose={handleCloseDialog}/>
+    </>
   );
 };
