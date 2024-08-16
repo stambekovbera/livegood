@@ -4,15 +4,15 @@ import React, { useState } from 'react';
 
 import { CustomInputWithButtons } from '@/shared/ui/CustomInputWithButtons/CustomInputWithButtons';
 
-import classes from './WithdrawalFundsDialogForm.module.scss';
+import classes from './ReplenishmentDialogForm.module.scss';
 
-interface IWithdrawalFundsDialogFormProps {
+interface IReplenishmentDialogFormProps {
+  className?: string;
   isOpen: boolean;
   onClose: () => void;
-  className?: string;
 }
 
-export const WithdrawalFundsDialogForm: React.FC<IWithdrawalFundsDialogFormProps> = (props) => {
+export const ReplenishmentDialogForm: React.FC<IReplenishmentDialogFormProps> = (props) => {
   const {
     className = '',
     isOpen,
@@ -28,7 +28,7 @@ export const WithdrawalFundsDialogForm: React.FC<IWithdrawalFundsDialogFormProps
   return (
     <Dialog open={ isOpen } onClose={ onClose } className={ cn( classes.wrapper, {}, [ className ] ) }>
       <DialogTitle>
-        Вывод
+        Пополнение
       </DialogTitle>
       <DialogContent>
         <Box className={ classes.form }>
@@ -37,7 +37,7 @@ export const WithdrawalFundsDialogForm: React.FC<IWithdrawalFundsDialogFormProps
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button fullWidth variant='contained' onClick={ onClose }>Вывести</Button>
+        <Button fullWidth variant='contained' onClick={ onClose }>Купить</Button>
       </DialogActions>
     </Dialog>
   );

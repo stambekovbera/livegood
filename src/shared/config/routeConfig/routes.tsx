@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import { AssignmentPage, FriendsPage, MainPage } from '@/pages';
+import { AssignmentPage, FriendsPage, MainPage, TransactionsPage } from '@/pages';
 import { PageLoader } from '@/shared/ui/PageLoader/PageLoader';
 
 const getElement = (element: React.ReactNode) => {
@@ -20,5 +20,9 @@ export const routes = createBrowserRouter( [
   {
     path: '/assignment',
     element: getElement( <AssignmentPage/> )
-  }
+  },
+  {
+    path: '/transactions',
+    element: getElement( <TransactionsPage/> )
+  },
 ] );

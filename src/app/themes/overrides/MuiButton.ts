@@ -19,7 +19,10 @@ export default {
     outlined: {
       borderColor: palette.primary.main,
       color: palette.primary.main,
-      backgroundColor: 'white'
+      backgroundColor: 'transparent',
+      fontWeight: '700',
+      fontSize: '16px',
+      lineHeight: '19px',
     }
   }
 };
