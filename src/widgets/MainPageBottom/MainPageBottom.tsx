@@ -16,7 +16,7 @@ export const MainPageBottom: React.FC<IMainPageBottomProps> = (props) => {
   } = props;
   return (
     <div className={ cn(classes.wrapper, {}, [ className ]) }>
-      <CoinContent/>
+      <CoinContent expired={false}/>
 
       <InvitedPartnersContent/>
     </div>

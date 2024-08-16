@@ -17,7 +17,7 @@ interface ICoinContentProps {
 export const CoinContent: React.FC<ICoinContentProps> = (props) => {
   const {
     className = '',
-    expired = true
+    expired = false
   } = props;
   return (
     <Box className={ cn(classes.wrapper, {}, [ className ]) }>
