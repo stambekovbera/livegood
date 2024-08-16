@@ -18,6 +18,10 @@ export const routes = createBrowserRouter( [
     element: getElement( <FriendsPage/> )
   },
   {
+    path: '/friends/:username',
+    element: getElement( <FriendsPage/> )
+  },
+  {
     path: '/assignment',
     element: getElement( <AssignmentPage/> )
   },

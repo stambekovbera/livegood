@@ -7,12 +7,16 @@ import { WithdrawalFundsDialogForm } from '@/features/WithdrawalFundsDialogForm'
 import classes from './ReferralsInfo.module.scss';
 
 interface IReferralsInfoProps {
+  incomeAmount: string;
+  invitedAmount: string;
   className?: string;
 }
 
 export const ReferralsInfo: React.FC<IReferralsInfoProps> = (props) => {
   const {
     className = '',
+    invitedAmount,
+    incomeAmount
   } = props;
 
   const [ isOpenDialog, setIsOpenDialog ] = useState<boolean>( false );
@@ -34,7 +38,7 @@ export const ReferralsInfo: React.FC<IReferralsInfoProps> = (props) => {
               Доход с рефералов
             </Typography>
             <Typography className={classes.value}>
-              55 TON
+              {incomeAmount} TON
             </Typography>
           </Box>
           <Box className={classes.content}>
@@ -42,7 +46,7 @@ export const ReferralsInfo: React.FC<IReferralsInfoProps> = (props) => {
               Друзей приглашено
             </Typography>
             <Typography className={classes.value}>
-              2
+              {incomeAmount}
             </Typography>
           </Box>
         </Box>

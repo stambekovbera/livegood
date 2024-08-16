@@ -19,6 +19,11 @@
 }
 
 .username {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   &:global.MuiTypography-root {
     font-size: 20px;
     line-height: 24px;

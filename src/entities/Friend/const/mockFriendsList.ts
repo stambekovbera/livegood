@@ -9,7 +9,7 @@ export const mockFriendsList: IFriend[] = [
     avatar: mockAvatar,
   },
   {
-    username: '@username2',
+    username: '@longusernameusername',
     lgCoinsAmount: 8555,
     friendsCount: 2,
     avatar: mockAvatar,

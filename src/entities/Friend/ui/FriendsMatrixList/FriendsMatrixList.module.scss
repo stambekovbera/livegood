@@ -19,6 +19,7 @@
   align-items: center;
   gap: 4px;
   position: relative;
+  cursor: pointer;
 
   &.last-depth {
     &:before, &:after {
@@ -72,6 +73,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
   }
 }
 
