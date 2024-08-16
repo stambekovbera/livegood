@@ -1,9 +1,9 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import cn from 'classnames';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { StatusesDrawer } from '@/entities/Status';
-import { CopyInviteButton } from '@/features/CopyInviteButton/ui/CopyInviteButton';
 import { InvitedPartnersAmount } from '@/widgets/InvitedPartnersAmount/InvitedPartnersAmount';
 
 import classes from './InvitedPartnersContent.module.scss';
@@ -18,6 +18,7 @@ export const InvitedPartnersContent: React.FC<IInvitedPartnersContentProps> = (p
   } = props;
 
   const [ isOpenDrawer, setIsOpenDrawer ] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const handleCloseDrawer = () => {
     setIsOpenDrawer( false );
@@ -27,13 +28,17 @@ export const InvitedPartnersContent: React.FC<IInvitedPartnersContentProps> = (p
     setIsOpenDrawer( true );
   };
 
+  const handleClickInvite = () => {
+    navigate('/friends');
+  };
+
   return (
     <>
       <Box className={ cn( classes.wrapper, {}, [ className ] ) }>
         <Box onClick={handleOpenDrawer}>
           <InvitedPartnersAmount amount='4' maxAmount='5'/>
         </Box>
-        <CopyInviteButton/>
+        <Button fullWidth variant='contained' onClick={handleClickInvite}>Пригласить друга</Button>
       </Box>
       <StatusesDrawer isOpen={isOpenDrawer} onClose={handleCloseDrawer}/>
     </>
