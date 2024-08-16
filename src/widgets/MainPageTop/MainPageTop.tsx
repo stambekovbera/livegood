@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Balance } from '@/entities/Balance/ui/Balance';
 import { TicketValidityPeriod } from '@/features/TicketValidityPeriod';
-import BookmarkIcon from '@/shared/assets/svg/Bookmark.svg?react';
+import BookmarkIcon from '@/shared/assets/svg/bookmark.svg?react';
 
 import classes from './MainPageTop.module.scss';
 
