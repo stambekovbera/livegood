@@ -3,7 +3,7 @@ import cn from 'classnames';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import TonIcon from '@/shared/assets/svg/Balance/TON.svg?react';
+import TonIcon from '@/shared/assets/svg/Balance/ton.svg?react';
 
 import classes from './Balance.module.scss';
 
