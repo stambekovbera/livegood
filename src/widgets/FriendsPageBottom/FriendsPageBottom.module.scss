@@ -6,8 +6,11 @@
   border-radius: 40px 40px 0 0;
   display: flex;
   flex-direction: column;
-  gap: 60px;
   justify-content: space-between;
+
+  &.matrix-variant {
+    gap: 60px;
+  }
 }
 
 .top {
