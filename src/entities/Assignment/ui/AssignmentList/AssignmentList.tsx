@@ -19,10 +19,12 @@ export const AssignmentList: React.FC<IAssignmentListProps> = (props) => {
 
 
   return (
-    <Box className={ cn(classes.wrapper, {}, [ className ]) }>
-      {mockAssignmentList.map(assignment => (
-        <AssignmentListItem key={`assignment-list-item-${assignment.id}`} assignment={assignment}/>
-      ))}
-    </Box>
+    <>
+      <Box className={ cn(classes.wrapper, {}, [ className ]) }>
+        {mockAssignmentList.map(assignment => (
+          <AssignmentListItem key={`assignment-list-item-${assignment.id}`} assignment={assignment}/>
+        ))}
+      </Box>
+    </>
   );
 };
